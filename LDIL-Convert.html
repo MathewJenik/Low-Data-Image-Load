@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Fast Image Load</title>
+        <script type="text/javascript" src="FastImageLoad.js"></script>
+    </head>
+    <body>
+        <h1>Fast Image Load</h1>
+        <p id="imageData"></p>
+
+        <input type="file" id="file-selector">
+        <button type="button" name="button" onclick="fastImageLoad('imageData')">Start Load</button>
+
+        <canvas id="canvas" width="400" height="400"></canvas>
+
+        <script type="text/javascript">
+            const fileSelector = document.getElementById('file-selector');
+  fileSelector.addEventListener('change', (event) => {
+    const fileList = event.target.files;
+    console.log(fileList);
+    //readImage(fileList[0]);
+  });
+        </script>
+    </body>
+</html>
